@@ -1,0 +1,53 @@
+/* Basic sample */
+
+body {
+	overflow: hidden;
+	background-color: #fcfcfc;
+	margin: 0;
+	padding: 0;
+}
+
+.flipbook-viewport {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.flipbook-viewport .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* 正確な中央配置 */
+}
+
+.flipbook-viewport .flipbook {
+	width: 498px; /* 画像サイズに合わせる */
+	height: 646px; /* 画像サイズに合わせる */
+}
+
+.flipbook-viewport .page {
+	width: 498px; /* 画像サイズに合わせる */
+	height: 646px; /* 画像サイズに合わせる */
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: cover; /* 背景を切れないように調整 */
+}
+
+.flipbook .page {
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flipbook-viewport .page img {
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0;
+}
+
+.flipbook-viewport .shadow {
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	transition: box-shadow 0.5s;
+
+	-webkit-box-shadow: 0 0 20px #ccc;
+	box-shadow: 0 0 20px #ccc;
+}
