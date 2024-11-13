@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=498, user-scalable=no" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/turn.min.js"></script>
+<link rel="stylesheet" href="css/basic.css">
+<style>
+    /* flipbook全体が中央に配置されるよう調整 */
+    .flipbook-viewport {
+        width: 498px;
+        height: 646px;
+        margin: 0 auto; /* 中央配置 */
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(pages/1.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/2.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/3.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/4.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/5.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/6.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/7.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/8.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/9.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/10.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/11.jpg); background-size: cover;"></div>
+			<div style="background-image:url(pages/12.jpg); background-size: cover;"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+function loadApp() {
+
+	$('.flipbook').turn({
+			// 画像サイズに合わせた幅と高さ
+			width:498,
+			height:646,
+
+			// Elevation
+			elevation: 50,
+			
+			// Enable gradients
+			gradients: true,
+			
+			// Auto center this flipbook
+			autoCenter: true,
+
+			// Display single page
+			display: 'single'
+	});
+}
+
+// Initialize turn.js
+loadApp();
+
+</script>
+
+</body>
+</html>
